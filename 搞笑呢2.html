@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烦人，真烦人</title>
+</head>
+<body>
+    <button id="dzs" onclick="dianzan()">0</button>
+    <script>
+        function dianzan(uid,bv){
+         let jilu=database.get("dianzanjilu,uid,bv")
+         if(jilu){
+            let dainzanshu=database.jian("dainzanshu,bv,1");
+         database.shanchu("dainzanjilu",uid,bv);
+         document.getElementById("dzs").innerText=dainzanshu;
+         }
+         else{
+            let dainzanshu=database.jia("dainzanshu,bv,1");
+         databasse.tianjia("dainzanjilu",uid,bv);
+         document.getElementById("dzs").innerText=dainzanshu;
+         }
+            return
+        }
+    </script>
+</body>
+</html>
